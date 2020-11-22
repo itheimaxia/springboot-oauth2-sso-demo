@@ -1,0 +1,16 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /productService
+security:
+  oauth2:
+    client:
+      client-id: ProductService
+      client-secret: product123
+      access-token-uri: http://localhost:8080/oauth/token
+      user-authorization-uri: http://localhost:8080/oauth/authorize
+    resource:
+      jwt:
+        key-uri: http://localhost:8080/oauth/token_key
+oauth2:
+   logout: http://localhost:8080/logout
